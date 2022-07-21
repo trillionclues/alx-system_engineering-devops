@@ -9,6 +9,7 @@
   <li><a href="https://github.com/trillionclues/alx-system_engineering-devops/tree/main/0x01-shell_permissions">0x01 - Shell permissions</a></li>
   <li><a href="https://github.com/trillionclues/alx-system_engineering-devops/tree/main/0x02-shell_redirections">0x02 - Shell redirections</a></li>
   <li><a href="https://github.com/trillionclues/alx-system_engineering-devops/tree/main/0x03-shell_variables_expansions">0x03 - Shell variables and expansions</a></li>
+  <li><a href="https://github.com/trillionclues/alx-system_engineering-devops/tree/main/0x04-loops_conditions_and_parsing">0x04 - loops conditions and parsing</a></li>
 </ul>
 </break>
 
