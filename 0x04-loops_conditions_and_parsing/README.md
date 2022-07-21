@@ -1,6 +1,13 @@
 
 # Loops, conditions and parsing
 
+
+# Resources
+* [Create a SSH RSA key pair](https://docs.rackspace.com/support/how-to/generating-rsa-keys-with-ssh-puttygen/)
+* [Loops sample](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_09_01.html)
+* [Variable assignment and arithmetic](https://tldp.org/LDP/abs/html/ops.html)
+* [Comparison Operators](https://tldp.org/LDP/abs/html/comparison-ops.html)
+
 In this ALX project, I practiced working with loops and conditional statements in Bash.
 
 ## Tasks :page_with_curl:
