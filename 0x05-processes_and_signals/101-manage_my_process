@@ -1,33 +1,34 @@
 #!/usr/bin/env bash
-# Start/Stops/Restarts. Script to be used with manage_my_process
+#Bash script that creates a subprocess
+. /lib/lsb/init-functions
 
-file="/var/run/my_process.pid"
-process_start()
-{
+PIDFILE=/var/run/my_process.pid
+
+start() {
     ./manage_my_process &
-    echo "$!" > "$file"
+    echo "$!" > "$PIDFILE"
 }
 
-process_stop()
-{
-    kill "$(cat $file)"
-    rm $file
+stop() {
+    sudo kill -15 "$(cat "$PIDFILE")" && rm -f "$PIDFILE"
 }
-case "$1" in
-     start)
-	 process_start
-	 echo "manage_my_process started"
-	 ;;
-     stop)
-	 process_stop
-	 echo "manage_my_process stopped"
-	 ;;
-     restart)
-	 process_stop
-	 process_start
-	 echo "manage_my_process restarted"
-	 ;;
-     *)
-	 echo "Usage: manage_my_process {start|stop|restart}"
-	 ;;
+
+case "$1" in 
+    start)
+       start
+       echo "manage_my_process started"
+       ;;
+    stop)
+       stop
+       echo "manage_my_process stopped"
+       ;;
+    restart)
+       stop
+       start
+       echo "manage_my_process restarted"
+       ;;
+    *)
+       echo "Usage: manage_my_process {start|stop|restart}"
 esac
+
+exit 0
